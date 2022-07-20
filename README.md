@@ -5,9 +5,9 @@
 <ol>
 <li><code>sudo</code></li>
 <li><code>apt install git -y</code></li>
-<li><code>git clone https://github.com/H1emu/H1emu-community-server-install.git<br /></code></li>
-<li><code>cd H1emu-community-server-install</code></li>
-<li><code>chmod +x communityinstall.sh</code></li>
+<li><code>git clone https://github.com/H1emu/H1emu-private-server-install.git<br /></code></li>
+<li><code>cd H1emu-private-server-install</code></li>
+<li><code>chmod +x install.sh</code></li>
 <li><code>./install.sh</code></li>
 </ol>
 <p dir="auto"></p>
