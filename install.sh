@@ -43,6 +43,7 @@ echo 'export MONGO_URL="mongodb://localhost:27017/"' >> start.sh
 echo 'pm2 kill' >> start.sh
 echo 'pm2 start mongo-gui' >> start.sh
 echo 'pm2 start docker/2016/zoneServer.js --watch' >> start.sh
+echo 'pm2 start docker/2015/loginServer.js --watch' >> start.sh
 echo 'export DEBUG="*"' >> start.sh
 echo 'pm2 startup' >> start.sh
 echo 'sleep 5' >> start.sh
