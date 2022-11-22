@@ -11,6 +11,9 @@ apt install nodejs npm git net-tools software-properties-common nano node-typesc
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4
 add-apt-repository 'deb [arch=amd64] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse' -y
 apt install mongodb-org -y
+sysctl -w net.ipv6.conf.all.disable_ipv6=1
+sysctl -w net.ipv6.conf.default.disable_ipv6=1
+sysctl -w net.ipv6.conf.lo.disable_ipv6=1
 systemctl start mongod
 systemctl enable mongod
 echo "Installing MongoDB Web GUI"
@@ -35,6 +38,9 @@ pm2 start docker/2016/zoneServer.js --watch
 export DEBUG="*"
 pm2 start docker/2015/loginServer.js --watch
 pm2 startup
+echo 'sysctl -w net.ipv6.conf.all.disable_ipv6=1' >> start.sh
+echo 'sysctl -w net.ipv6.conf.default.disable_ipv6=1' >> start.sh
+echo 'sysctl -w net.ipv6.conf.lo.disable_ipv6=1' >> start.sh
 echo 'export DEBUG="ZoneServer"' >> start.sh
 echo 'export CLIENT_SIXTEEN="true"' >> start.sh
 echo 'export WORLD_ID="2"' >> start.sh
