@@ -21,7 +21,7 @@
 <tr>
 <td>Start server</td>
 <td>cd /H1emu-private-server-install/h1z1-server/</td>
-<td>Then ./start.sh</td>
+<td>Then sudo ./start.sh</td>
 </tr>
 <tr>
 <td>Show server output</td>
