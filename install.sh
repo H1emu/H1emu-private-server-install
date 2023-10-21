@@ -9,7 +9,8 @@ echo "Running H1emu.com Private Server installer"
 apt update && apt upgrade -y
 apt install nodejs npm git net-tools software-properties-common nano node-typescript -y
 apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD75D9DCB49F368818C72E52529D4
-add-apt-repository 'deb [arch=amd64] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse' -y
+apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 160D26BB1785BA38
+add-apt-repository 'deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/7.0 multiverse' -y
 apt install mongodb-org -y
 sysctl -w net.ipv6.conf.all.disable_ipv6=1
 sysctl -w net.ipv6.conf.default.disable_ipv6=1
